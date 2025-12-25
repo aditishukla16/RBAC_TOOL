@@ -1,32 +1,35 @@
 # 🔐 RBAC Admin Dashboard
 
-A **Role-Based Access Control (RBAC)** admin dashboard built with **Next.js App Router**.  
-It allows admins to manage **users, roles, and permissions** securely from one place.
+A Role-Based Access Control (RBAC) admin dashboard built with **Next.js App Router**.  
+It helps manage **users, roles, and permissions** in a clean, scalable, and secure way.
 
 ---
+
 ## 📖 What is RBAC?
 
 RBAC decides **who can do what** in an application.
 
-- Users get **roles**
-- Roles have **permissions**
-- Permissions control actions
+- Users are assigned **roles**
+- Roles contain **permissions**
+- Permissions define **allowed actions**
 
-This keeps access control **simple, secure, and scalable**.
+This keeps access control simple and maintainable.
 
 ---
+
 ## 🚀 Features
 
-- JWT Authentication  
+- JWT-based Authentication  
 - User Management  
 - Role Management  
 - Permission Management  
 - Role–Permission Assignment  
 - User–Role Assignment  
 - Protected API Routes  
-- Admin Dashboard UI
-  
+- Admin Dashboard UI  
+
 ---
+
 ## 🛠 Tech Stack
 
 **Frontend & Backend**
@@ -49,27 +52,29 @@ This keeps access control **simple, secure, and scalable**.
 
 app/
 ├── api/ # Backend APIs
-├── dashboard/ # Admin pages
+├── dashboard/ # Admin dashboard pages
 ├── components/ # UI & layouts
-├── store/ # RBAC state
+├── store/ # RBAC state management
 ├── hooks/ # Custom hooks
 ├── lib/ # Prisma & utilities
 ├── middleware.ts # Auth guard
 
 
-## 🔑 Environment Variables
+---
 
-Create a `.env` file:
+## 🔐 Environment Variables
+
+Create a `.env` file in the root directory:
+
+```env
 DATABASE_URL=postgresql://user:password@localhost:5432/rbac_db
 JWT_SECRET=your-secret-key
 JWT_EXPIRES_IN=24h
 
-▶️ Run Locally
+##▶️ Run Locally
 npm install
 npx prisma migrate dev
 npm run dev
 
-
-
-📄 License
+**📄 License**
 MIT
