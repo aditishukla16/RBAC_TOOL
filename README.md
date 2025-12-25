@@ -48,18 +48,18 @@ This keeps access control **simple, secure, and scalable**.
 ## 📁 Project Structure
 
 app/
-├── api/ # Backend API routes
-├── dashboard/ # Admin dashboard pages
-├── components/ # UI components & layouts
-├── store/ # RBAC state management
-├── hooks/ # Custom React hooks
-├── lib/ # Prisma client & utilities
-├── middleware.ts # Authentication middleware
+├── api/ # Backend APIs
+├── dashboard/ # Admin pages
+├── components/ # UI & layouts
+├── store/ # RBAC state
+├── hooks/ # Custom hooks
+├── lib/ # Prisma & utilities
+├── middleware.ts # Auth guard
 
 
-## 🔧 Environment Variables
+## 🔑 Environment Variables
 
-Create a `.env` file in the root directory:
+Create a `.env` file:
 DATABASE_URL=postgresql://user:password@localhost:5432/rbac_db
 JWT_SECRET=your-secret-key
 JWT_EXPIRES_IN=24h
@@ -69,5 +69,7 @@ npm install
 npx prisma migrate dev
 npm run dev
 
-📝 License
+
+
+📄 License
 MIT
