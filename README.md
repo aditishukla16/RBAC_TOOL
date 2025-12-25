@@ -1,10 +1,17 @@
-# 🔐 RBAC Admin Dashboard
+🔐 RBAC Admin Dashboard
 
-A **Role-Based Access Control (RBAC) Admin Dashboard** for managing users, roles, and permissions in modern web applications.
+Enterprise-grade Role-Based Access Control system with advanced security, audit logging, and multi-tenancy support
 
-This project provides a scalable and secure authorization system where access is controlled through well-defined roles instead of assigning permissions individually.
+🎯 Live Demo
+Try it now: https://rbac-tool-igdr.vercel.app/signin
+Test Credentials:
 
----
+Email: aditi@gmail.com
+Password: aditi123
+
+
+🌟 Overview
+A production-ready RBAC Admin Dashboard built for modern SaaS applications requiring sophisticated access control. This system goes beyond basic role management by implementing hierarchical permissions, audit trails, session management, and real-time security monitoring.
 
 ## 📚 What is RBAC?
 
