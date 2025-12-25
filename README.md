@@ -1,74 +1,71 @@
-🔐 RBAC Admin Dashboard
+# 🔐 RBAC Admin Dashboard
 
-A Role-Based Access Control (RBAC) admin dashboard built using Next.js App Router.
-It helps manage users, roles, and permissions in a structured and secure way.
+A **Role-Based Access Control (RBAC)** admin dashboard built with **Next.js App Router**.  
+It allows admins to manage **users, roles, and permissions** securely from one place.
 
-📖 What is RBAC?
+---
 
-RBAC controls who can do what in an application.
+## 📖 What is RBAC?
 
-Users are assigned roles
+RBAC decides **who can do what** in an application.
 
-Roles contain permissions
+- Users get **roles**
+- Roles have **permissions**
+- Permissions control actions
 
-Permissions define allowed actions
+This keeps access control **simple, secure, and scalable**.
 
-This makes access control scalable and easy to manage.
+---
 
-🚀 Features
+## 🚀 Features
 
-JWT-based Authentication
+- JWT Authentication  
+- User Management  
+- Role Management  
+- Permission Management  
+- Role–Permission Assignment  
+- User–Role Assignment  
+- Protected API Routes  
+- Admin Dashboard UI  
 
-User Management
+---
 
-Role Management
+## 🛠 Tech Stack
 
-Permission Management
+- Next.js (App Router)  
+- TypeScript  
+- Tailwind CSS  
+- shadcn/ui  
+- PostgreSQL  
+- Prisma ORM  
+- JWT + bcrypt  
 
-Role–Permission Assignment
+---
 
-User–Role Assignment
+## 📂 Project Structure
 
-Protected API Routes
-
-Admin Dashboard UI
-
-🛠 Tech Stack
-
-Next.js (App Router)
-
-TypeScript
-
-Tailwind CSS
-
-shadcn/ui
-
-PostgreSQL
-
-Prisma ORM
-
-JWT + bcrypt
-
-📂 Project Structure
+```txt
 app/
-├── api/                # Backend APIs
-├── dashboard/          # Admin dashboard pages
-├── components/         # Layout & UI components
-├── store/              # RBAC state management
-├── hooks/              # Custom hooks
-├── lib/                # Prisma & utilities
-└── middleware.ts       # Auth middleware
-
+├── api/          # Backend APIs
+├── dashboard/    # Admin pages
+├── components/   # UI & layouts
+├── store/        # RBAC state
+├── hooks/        # Custom hooks
+├── lib/          # Prisma & utilities
+└── middleware.ts # Auth guard
 🔧 Environment Variables
+Create a .env file:
+
+env
+Copy code
 DATABASE_URL=postgresql://user:password@localhost:5432/rbac_db
 JWT_SECRET=your-secret-key
 JWT_EXPIRES_IN=24h
-
 ▶️ Run Locally
+bash
+Copy code
 npm install
 npx prisma migrate dev
 npm run dev
-
 📝 License
-
-MIT License
+MIt
