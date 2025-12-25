@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import jwt from "jsonwebtoken";
 
-const JWT_SECRET = process.env.JWT_SECRET!;
-
+import { JWT_SECRET } from "./config";
 export function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
@@ -15,29 +14,29 @@ export function middleware(req: NextRequest) {
     return NextResponse.next();
   }
 
-  // 🔒 Protect all other /api routes
-  if (pathname.startsWith("/api")) {
-    const authHeader = req.headers.get("authorization");
+  // // 🔒 Protect all other /api routes
+  // if (pathname.startsWith("/api")) {
+  //   const authHeader = req.headers.get("authorization");
 
-    if (!authHeader || !authHeader.startsWith("Bearer ")) {
-      return NextResponse.json(
-        { message: "Unauthorized" },
-        { status: 401 }
-      );
-    }
+  //   if (!authHeader || !authHeader.startsWith("Bearer ")) {
+  //     return NextResponse.json(
+  //       { message: "Unauthorized" },
+  //       { status: 401 }
+  //     );
+  //   }
 
-    const token = authHeader.split(" ")[1];
+  //   const token = authHeader.split(" ")[1];
 
-    try {
-      jwt.verify(token, JWT_SECRET);
-      return NextResponse.next();
-    } catch (err) {
-      return NextResponse.json(
-        { message: "Invalid or expired token" },
-        { status: 401 }
-      );
-    }
-  }
+  //   try {
+  //     jwt.verify(token, JWT_SECRET);
+  //     return NextResponse.next();
+  //   } catch (err) {
+  //     return NextResponse.json(
+  //       { message: "Invalid or expired token" },
+  //       { status: 401 }
+  //     );
+  //   }
+  // }
 
   return NextResponse.next();
 }
